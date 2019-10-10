@@ -15,8 +15,10 @@ Escenario: Veo cuatro botones
 	Y presiono el boton avanzar
 	Entonces aparece la pantalla jugar con con los botones "1", "2", "3", "4" 
 
-Escenario: Hago click en el boton "1"
+
+
+Escenario: Hago click en el boton "2"
 	Dado que estoy en la portada memorizar
 	Y presiono el boton avanzar
-	Y presiono sobre el boton "1"
-	Entonces veo el texto "OK" 
+	Y presiono sobre el boton "2"
+	Entonces veo el texto "Error" 

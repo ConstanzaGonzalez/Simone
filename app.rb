@@ -15,3 +15,13 @@ end
 post '/ok' do
 	erb:ok
 end
+
+post '/boton' do
+	@value = params["boton"].to_i
+	respuesta = @@simone.comparar_y_avanzar @value
+	if respuesta
+		erb:jugar
+  else
+		erb:error
+	end
+end

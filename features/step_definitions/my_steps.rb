@@ -34,8 +34,7 @@ last_response.body.should=~ /#{arg4}/m
 end
 
 Dado(/^presiono sobre el boton "(.*?)"$/) do |arg1|
-  click_button('1')
-	visit '/ok', :post
+  click_button(arg1)
 end
 
 Entonces(/^veo el texto "(.*?)"$/) do |arg1|
