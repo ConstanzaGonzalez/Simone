@@ -1,5 +1,5 @@
 require 'sinatra'
 
-get '/' do
-    
+get '/memorizar' do
+	erb:memorizar   
 end
