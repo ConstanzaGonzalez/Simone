@@ -12,4 +12,6 @@ post '/jugar' do
 	erb:jugar
 end
 
-
+post '/ok' do
+	erb:ok
+end

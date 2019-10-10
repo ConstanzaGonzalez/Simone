@@ -26,7 +26,19 @@ Dado(/^presiono el boton avanzar$/) do
 	click_button('avanzar')
 end
 
-Entonces(/^aparece la pantalla jugar con el boton "(.*?)"$/) do |numero|
-	last_response.body.should=~ /#{numero}/m
+Entonces(/^aparece la pantalla jugar con con los botones "(.*?)", "(.*?)", "(.*?)", "(.*?)"$/) do |arg1, arg2, arg3, arg4|
+last_response.body.should=~ /#{arg1}/m
+last_response.body.should=~ /#{arg2}/m
+last_response.body.should=~ /#{arg3}/m
+last_response.body.should=~ /#{arg4}/m
+end
+
+Dado(/^presiono sobre el boton "(.*?)"$/) do |arg1|
+  click_button('1')
+	visit '/ok', :post
+end
+
+Entonces(/^veo el texto "(.*?)"$/) do |arg1|
+	last_response.body.should=~ /#{arg1}/m
 end
 
