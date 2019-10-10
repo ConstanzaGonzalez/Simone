@@ -1,7 +1,7 @@
 class Secuencia
 
 	def initialize
-		@secuenciaInicial = [3,1,4,2,1,4,3,2]
+		@secuenciaInicial = [3,1,4,2]
 		@secuenciaActual = []
 		@@ronda = 0
  	end
@@ -25,9 +25,11 @@ class Secuencia
 	def comparar numero
 		return @secuenciaInicial[@@ronda] == numero  
 	end
+
 	def incrementar_ronda
 		@@ronda+=1	
 	end
+
 	def comparar_y_avanzar numero
 		respuesta = comparar numero
 		if respuesta 
@@ -35,4 +37,11 @@ class Secuencia
 		end
 		return respuesta
 	end
+
+	def finalizo_juego
+		largo_lista = @secuenciaInicial.length
+		return @@ronda == (largo_lista -1)
+			
+	end
+
 end

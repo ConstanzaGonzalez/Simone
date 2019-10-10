@@ -14,7 +14,7 @@ describe "Simone" do
 
 	it "Dame la secuencia inicial" do
 	  secuencia = Secuencia.new
-	  expect( secuencia.inicial ).to eq [3,1,4,2,1,4,3,2]
+	  expect( secuencia.inicial ).to eq [3,1,4,2]
 	end
 
 	it "Dame la secuencia de dos numeros en string" do
@@ -43,6 +43,11 @@ describe "Simone" do
 		expect(respuesta).to eq true	
 		respuesta = secuencia.comparar_y_avanzar(1)
 		expect(respuesta).to eq true	
+	end
+	it "Juego la ronda final" do
+		secuencia = Secuencia.new
+		expect(secuencia.finalizo_juego).to eq false		
+			
 	end
 	
 	
