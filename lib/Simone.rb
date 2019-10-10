@@ -12,6 +12,10 @@ class Secuencia
 		end
    return @secuenciaActual
 	end
+
+   def secuenciaToString 
+     @secuenciaActual.join("-")
+   end
  
  def inicial
    @secuenciaInicial

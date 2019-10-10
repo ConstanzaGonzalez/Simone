@@ -4,7 +4,7 @@ Característica: Simone
 
 Escenario: Muestra secuencia numerica
 	Dado que voy a la portada memorizar
-	Entonces veo "3-2"
+	Entonces veo "3-1"
 
 Escenario: Muestra avanzar
 	Dado que estoy en portada memorizar

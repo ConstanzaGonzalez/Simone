@@ -17,5 +17,11 @@ it "Dame la secuencia inicial" do
   expect( secuencia.inicial ).to eq [3,1,4,2,1,4,3,2]
 end
 
+it "Dame la secuencia de dos numeros en string" do
+  secuencia = Secuencia.new
+  secuencia.obtener(1)
+  expect( secuencia.secuenciaToString ).to eq "3-1"
+end
+
 
 end
