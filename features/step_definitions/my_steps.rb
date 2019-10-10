@@ -35,7 +35,7 @@ end
 
 Dado(/^presiono sobre el boton "(.*?)"$/) do |arg1|
   click_button('1')
-	visit '/ok'
+	visit '/ok', :post
 end
 
 Entonces(/^veo el texto "(.*?)"$/) do |arg1|
