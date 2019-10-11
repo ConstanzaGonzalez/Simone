@@ -1,9 +1,16 @@
+<div class='row'>
+	<div class='col-sm-8 ml-5 mt-5'>
+		<h1><b>REGLAS   DEL   JUEGO</b></h1>
+		<h4>Tendras que memorizar la siguiente secuencia de numeros:</h4>
+		<h2 class='pl-4'><%= @secuencia %></h2>
+	</div>
+</div>
+<div class='row'>
+	<div class='col-sm-8 ml-5'>
+		<form method="post" action="/jugar">
+			<input class='btn btn-secondary btn-lg' type="submit" value="avanzar">
+		</form>
+		<h5 class='mt-2'>Para empezar a jugar debes apretar el botón avanzar</h5>
+	</div>
+</div>
 
-<h1>REGLAS   DEL   JUEGO</h1>
-<h4>Tendras que memorizar la siguiente secuencia de numeros</h4>
-<h2><%= @secuencia %></h2>
-<h4>Para empezar a jugar debes apretar el botón avanzar</h4>
-
-<form method="post" action="/jugar">
-	<input type="submit" value="avanzar">
-</form>
