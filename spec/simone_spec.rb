@@ -149,4 +149,42 @@ describe "Simone" do
 		expect(respuesta).to eq false		
 	end
 
+	it "Gano el juego obtener siguiente" do
+		secuencia = Secuencia.new
+    secuencia.obtener_siguiente
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false	
+		expect(secuencia.finalizo_ronda).to eq true		
+    secuencia.obtener_siguiente
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false	
+    respuesta = secuencia.comparar_y_avanzar(1)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq true		
+    secuencia.obtener_siguiente
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false	
+    respuesta = secuencia.comparar_y_avanzar(1)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false		
+    respuesta = secuencia.comparar_y_avanzar(4)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq true	
+    secuencia.obtener_siguiente
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false	
+    respuesta = secuencia.comparar_y_avanzar(1)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false		
+    respuesta = secuencia.comparar_y_avanzar(4)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false	
+    respuesta = secuencia.comparar_y_avanzar(2)
+    expect(secuencia.finalizo_juego).to eq true
+		expect(secuencia.finalizo_ronda).to eq true	
+	end
+
 end

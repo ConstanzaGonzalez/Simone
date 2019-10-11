@@ -7,6 +7,10 @@ class Secuencia
 		@@targetRonda = 0
  	end
 
+	def obtener_siguiente
+		obtener(@@targetRonda)
+	end
+
 	def obtener iteracion 
     	@@ronda = 0
       @secuenciaActual = []
