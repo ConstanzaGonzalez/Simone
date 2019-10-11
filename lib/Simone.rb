@@ -1,15 +1,23 @@
 class Secuencia
 
 	def reset
-		@secuenciaInicial = [3,1,4,2]	
 		@secuenciaActual = []
 		@@ronda = 0
 		@@targetRonda = 0    
-  end
+	end
 	 
-  def initialize
+ 	def initialize
+		@secuenciaInicial = []
+		@secuenciaInicial = crear_secuencia_random
 		reset
  	end
+
+	def crear_secuencia_random
+		for i in 0..3 do
+			@secuenciaInicial = @secuenciaInicial.push(rand(1..4))
+		end
+		return @secuenciaInicial
+	end
 
 	def modo_test
 		@secuenciaInicial = [3,1,4,2]
