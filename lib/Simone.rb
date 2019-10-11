@@ -7,8 +7,9 @@ class Secuencia
 		@@targetRonda = 0
  	end
 
-	def obtener iteracion
-
+	def obtener iteracion 
+    	@@ronda = 0
+      @secuenciaActual = []
 		for i in 0..iteracion do
 			@secuenciaActual.push(@secuenciaInicial[i])
 		end
@@ -47,8 +48,8 @@ class Secuencia
 	end
 
 	def finalizo_ronda
-		return @@ronda == @@targetRonda
-			
+ 		resultado = @@ronda == @@targetRonda
+		return resultado
 	end
 
 end

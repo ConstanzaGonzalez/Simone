@@ -64,8 +64,9 @@ describe "Simone" do
 		respuesta = secuencia.comparar_y_avanzar(1)
 		respuesta = secuencia.comparar_y_avanzar(4)
 		respuesta = secuencia.comparar_y_avanzar(2)
-		expect(secuencia.finalizo_ronda).to eq true		
     expect(secuencia.finalizo_juego).to eq true		
+   	expect(secuencia.finalizo_ronda).to eq true		
+ 	
 	end
 	
 	it "Juego ronda de 2" do
@@ -73,17 +74,79 @@ describe "Simone" do
     secuencia.obtener(1)
     respuesta = secuencia.comparar_y_avanzar(3)
 		respuesta = secuencia.comparar_y_avanzar(1)
+    expect(secuencia.finalizo_juego).to eq false	
 		expect(secuencia.finalizo_ronda).to eq true		
-    expect(secuencia.finalizo_juego).to eq false		
+	
 	end
 	
 	it "Juego ronda de 1" do
 		secuencia = Secuencia.new
     secuencia.obtener(0)
     respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false	
 		expect(secuencia.finalizo_ronda).to eq true		
-    expect(secuencia.finalizo_juego).to eq false		
-	end
 	
+	end
+
+	it "Juego dos rondas" do
+		secuencia = Secuencia.new
+    secuencia.obtener(0)
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false	
+		expect(secuencia.finalizo_ronda).to eq true		
+    secuencia.obtener(1)
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false	
+    respuesta = secuencia.comparar_y_avanzar(1)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq true		
+	end
+
+	it "Gano el juego" do
+		secuencia = Secuencia.new
+    secuencia.obtener(0)
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false	
+		expect(secuencia.finalizo_ronda).to eq true		
+    secuencia.obtener(1)
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false	
+    respuesta = secuencia.comparar_y_avanzar(1)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq true		
+    secuencia.obtener(2)
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false	
+    respuesta = secuencia.comparar_y_avanzar(1)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false		
+    respuesta = secuencia.comparar_y_avanzar(4)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq true	
+    secuencia.obtener(3)
+    respuesta = secuencia.comparar_y_avanzar(3)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false	
+    respuesta = secuencia.comparar_y_avanzar(1)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false		
+    respuesta = secuencia.comparar_y_avanzar(4)
+    expect(secuencia.finalizo_juego).to eq false
+		expect(secuencia.finalizo_ronda).to eq false	
+    respuesta = secuencia.comparar_y_avanzar(2)
+    expect(secuencia.finalizo_juego).to eq true
+		expect(secuencia.finalizo_ronda).to eq true	
+	end
+
+		it "Me equivoco en la primera ronda" do
+		secuencia = Secuencia.new
+    secuencia.obtener(1)
+    respuesta = secuencia.comparar_y_avanzar(3)
+		respuesta = secuencia.comparar_y_avanzar(2)
+		expect(respuesta).to eq false		
+	end
 
 end
