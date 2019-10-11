@@ -31,3 +31,7 @@ Escenario: Jugador gana
 	Y presiono sobre el boton "4"
 	Y presiono sobre el boton "2"
 	Entonces veo el texto "Ganaste!"
+
+Escenario: Muestra reglas del juego
+	Dado que estoy en la portada memorizar
+	Entonces veo el texto "REGLAS   DEL   JUEGO"
