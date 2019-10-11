@@ -3,7 +3,7 @@ require "./lib/Simone.rb"
 
 get '/memorizar' do
 	@@simone = Secuencia.new
-  @@simone.obtener(1)
+  @@simone.obtener(3)
 	@secuencia = @@simone.secuenciaToString
 	erb:memorizar   
 end
