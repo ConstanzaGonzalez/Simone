@@ -31,3 +31,7 @@ Entonces(/^veo el texto "(.*?)"$/) do |arg1|
 	last_response.body.should=~ /#{arg1}/m
 end
 
+Dado(/^presiono sobre  "(.*?)"$/) do |text|
+   click_link(text)
+end
+

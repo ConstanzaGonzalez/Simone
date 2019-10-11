@@ -35,3 +35,56 @@ Escenario: Jugador gana
 Escenario: Muestra reglas del juego
 	Dado que estoy en la portada memorizar
 	Entonces veo el texto "REGLAS   DEL   JUEGO"
+
+Escenario: Volver a empezar el juego
+	Dado que estoy en la portada memorizar
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono sobre el boton "4"
+	Y presiono sobre el boton "2"
+	Entonces veo el texto "Volver a jugar"
+
+Escenario: Volver a empezar el juego
+	Dado que estoy en la portada memorizar
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono sobre el boton "4"
+	Y presiono sobre el boton "3"
+	Entonces veo el texto "Volver a jugar"
+
+Escenario: Volver a empezar el juego
+	Dado que estoy en la portada memorizar
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono sobre el boton "4"
+	Y presiono sobre el boton "2"
+	Y presiono sobre  "Volver a jugar"
+	Entonces aparece boton "avanzar"
+
+Escenario: Volver a empezar el juego
+	Dado que estoy en la portada memorizar
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono sobre el boton "4"
+	Y presiono sobre el boton "1"
+	Y presiono sobre  "Volver a jugar"
+	Entonces aparece boton "avanzar"
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
