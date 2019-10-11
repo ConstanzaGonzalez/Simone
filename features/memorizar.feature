@@ -3,11 +3,11 @@
 Característica: Simone
 
 Escenario: Muestra secuencia numerica
-	Dado que voy a la portada memorizar
+	Dado que estoy en la portada memorizar
 	Entonces veo "3-1"
 
 Escenario: Muestra avanzar
-	Dado que estoy en portada memorizar
+	Dado que estoy en la portada memorizar
 	Entonces aparece boton "avanzar"
 
 Escenario: Veo cuatro botones
@@ -22,3 +22,12 @@ Escenario: Hago click en el boton "2"
 	Y presiono el boton avanzar
 	Y presiono sobre el boton "2"
 	Entonces veo el texto "Error" 
+
+Escenario: Jugador gana
+	Dado que estoy en la portada memorizar
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono sobre el boton "4"
+	Y presiono sobre el boton "2"
+	Entonces veo el texto "Ganaste!"

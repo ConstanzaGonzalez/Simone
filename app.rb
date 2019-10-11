@@ -12,16 +12,18 @@ post '/jugar' do
 	erb:jugar
 end
 
-post '/ok' do
-	erb:ok
-end
-
 post '/boton' do
 	@value = params["boton"].to_i
-	respuesta = @@simone.comparar_y_avanzar @value
+	respuesta = @@simone.comparar @value
 	if respuesta
-		erb:jugar
-  else
+		if @@simone.finalizo_juego
+			erb:ganaste
+		else
+			@@simone.incrementar_ronda
+			erb:jugar
+		end
+
+  	else
 		erb:error
 	end
 end
