@@ -47,9 +47,43 @@ describe "Simone" do
 	it "Juego la ronda final" do
 		secuencia = Secuencia.new
 		expect(secuencia.finalizo_juego).to eq false		
-			
+	end
+
+	it "Termino ronda de dos" do
+		secuencia = Secuencia.new
+    secuencia.obtener(1)
+    respuesta = secuencia.comparar_y_avanzar(3)
+		respuesta = secuencia.comparar_y_avanzar(1)
+		expect(secuencia.finalizo_ronda).to eq true		
+	end
+
+	it "Termino ronda de 4" do
+		secuencia = Secuencia.new
+    secuencia.obtener(3)
+    respuesta = secuencia.comparar_y_avanzar(3)
+		respuesta = secuencia.comparar_y_avanzar(1)
+		respuesta = secuencia.comparar_y_avanzar(4)
+		respuesta = secuencia.comparar_y_avanzar(2)
+		expect(secuencia.finalizo_ronda).to eq true		
+    expect(secuencia.finalizo_juego).to eq true		
 	end
 	
+	it "Juego ronda de 2" do
+		secuencia = Secuencia.new
+    secuencia.obtener(1)
+    respuesta = secuencia.comparar_y_avanzar(3)
+		respuesta = secuencia.comparar_y_avanzar(1)
+		expect(secuencia.finalizo_ronda).to eq true		
+    expect(secuencia.finalizo_juego).to eq false		
+	end
+	
+	it "Juego ronda de 1" do
+		secuencia = Secuencia.new
+    secuencia.obtener(0)
+    respuesta = secuencia.comparar_y_avanzar(3)
+		expect(secuencia.finalizo_ronda).to eq true		
+    expect(secuencia.finalizo_juego).to eq false		
+	end
 	
 
 end

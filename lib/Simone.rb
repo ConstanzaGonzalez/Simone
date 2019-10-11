@@ -4,6 +4,7 @@ class Secuencia
 		@secuenciaInicial = [3,1,4,2]
 		@secuenciaActual = []
 		@@ronda = 0
+		@@targetRonda = 0
  	end
 
 	def obtener iteracion
@@ -11,6 +12,7 @@ class Secuencia
 		for i in 0..iteracion do
 			@secuenciaActual.push(@secuenciaInicial[i])
 		end
+    @@targetRonda = @secuenciaActual.length
 		return @secuenciaActual
 	end
 
@@ -40,7 +42,12 @@ class Secuencia
 
 	def finalizo_juego
 		largo_lista = @secuenciaInicial.length
-		return @@ronda == (largo_lista -1)
+		return @@ronda == (largo_lista )
+			
+	end
+
+	def finalizo_ronda
+		return @@ronda == @@targetRonda
 			
 	end
 
