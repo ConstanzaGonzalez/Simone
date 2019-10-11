@@ -1,4 +1,5 @@
 Dado(/^que estoy en la portada memorizar$/) do
+	@@simone.modo_test
   visit '/'
 end
 

@@ -1,10 +1,14 @@
 class Secuencia
 
-	def initialize
+	def reset
 		@secuenciaInicial = [3,1,4,2]	
 		@secuenciaActual = []
 		@@ronda = 0
-		@@targetRonda = 0
+		@@targetRonda = 0    
+  end
+	 
+  def initialize
+		reset
  	end
 
 	def modo_test

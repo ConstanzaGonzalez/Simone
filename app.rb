@@ -1,9 +1,10 @@
 require "sinatra"
 require "./lib/Simone.rb"
 
+@@simone = Secuencia.new
 get '/' do
-	@@simone = Secuencia.new
-  	@@simone.obtener_siguiente
+  @@simone.reset
+  @@simone.obtener_siguiente
 	@secuencia = @@simone.secuenciaToString
 	erb:memorizar
 end
