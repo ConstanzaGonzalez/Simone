@@ -1,9 +1,15 @@
 require "sinatra"
 require "./lib/Simone.rb"
 
-get '/memorizar' do
+get '/' do
 	@@simone = Secuencia.new
-  @@simone.obtener_siguiente
+  	@@simone.obtener_siguiente
+	@secuencia = @@simone.secuenciaToString
+	erb:memorizar
+end
+
+get '/memorizar' do
+	@@simone.obtener_siguiente
 	@secuencia = @@simone.secuenciaToString
 	erb:memorizar   
 end
@@ -18,6 +24,10 @@ post '/boton' do
 	if respuesta
 		if @@simone.finalizo_juego
 			erb:ganaste
+		elsif @@simone.finalizo_ronda
+			@@simone.obtener_siguiente
+			@secuencia = @@simone.secuenciaToString
+			erb:memorizar
 		else
 			erb:jugar
 		end

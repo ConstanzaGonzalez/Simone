@@ -15,8 +15,6 @@ Escenario: Veo cuatro botones
 	Y presiono el boton avanzar
 	Entonces aparece la pantalla jugar con con los botones "1", "2", "3", "4" 
 
-
-
 Escenario: Hago click en el boton "2"
 	Dado que estoy en la portada memorizar
 	Y presiono el boton avanzar
@@ -25,6 +23,15 @@ Escenario: Hago click en el boton "2"
 
 Escenario: Jugador gana
 	Dado que estoy en la portada memorizar
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono sobre el boton "4"
 	Y presiono el boton avanzar
 	Y presiono sobre el boton "3"
 	Y presiono sobre el boton "1"
@@ -36,8 +43,17 @@ Escenario: Muestra reglas del juego
 	Dado que estoy en la portada memorizar
 	Entonces veo el texto "REGLAS   DEL   JUEGO"
 
-Escenario: Volver a empezar el juego
+Escenario: Volver a empezar el juego al ganar
 	Dado que estoy en la portada memorizar
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono sobre el boton "4"
 	Y presiono el boton avanzar
 	Y presiono sobre el boton "3"
 	Y presiono sobre el boton "1"
@@ -45,35 +61,23 @@ Escenario: Volver a empezar el juego
 	Y presiono sobre el boton "2"
 	Entonces veo el texto "Volver a jugar"
 
-Escenario: Volver a empezar el juego
+Escenario: Volver a empezar el juego al perder
 	Dado que estoy en la portada memorizar
 	Y presiono el boton avanzar
 	Y presiono sobre el boton "3"
-	Y presiono sobre el boton "1"
-	Y presiono sobre el boton "4"
+	Y presiono el boton avanzar
 	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "1"
+	Y presiono el boton avanzar
+	Y presiono sobre el boton "3"
+	Y presiono sobre el boton "2"
 	Entonces veo el texto "Volver a jugar"
 
-Escenario: Volver a empezar el juego
+Escenario: Pasar de ronda
 	Dado que estoy en la portada memorizar
 	Y presiono el boton avanzar
 	Y presiono sobre el boton "3"
-	Y presiono sobre el boton "1"
-	Y presiono sobre el boton "4"
-	Y presiono sobre el boton "2"
-	Y presiono sobre  "Volver a jugar"
-	Entonces aparece boton "avanzar"
-
-Escenario: Volver a empezar el juego
-	Dado que estoy en la portada memorizar
-	Y presiono el boton avanzar
-	Y presiono sobre el boton "3"
-	Y presiono sobre el boton "1"
-	Y presiono sobre el boton "4"
-	Y presiono sobre el boton "1"
-	Y presiono sobre  "Volver a jugar"
-	Entonces aparece boton "avanzar"
-	
+	Entonces veo el texto "3-1"
 
 
 

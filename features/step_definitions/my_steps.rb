@@ -1,5 +1,5 @@
 Dado(/^que estoy en la portada memorizar$/) do
-  visit '/memorizar'
+  visit '/'
 end
 
 Entonces(/^veo "(.*?)"$/) do |texto|
@@ -32,6 +32,6 @@ Entonces(/^veo el texto "(.*?)"$/) do |arg1|
 end
 
 Dado(/^presiono sobre  "(.*?)"$/) do |text|
-   click_link(text)
+   click_link(text)	
 end
 
