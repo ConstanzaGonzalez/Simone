@@ -1,17 +1,22 @@
 class Secuencia
 
 	def initialize
-		@secuenciaInicial = [3,1,4,2]
+		@secuenciaInicial = [3,1,4,2]	
 		@secuenciaActual = []
 		@@ronda = 0
 		@@targetRonda = 0
  	end
 
-	def obtener_siguiente
+	def modo_test
+		@secuenciaInicial = [3,1,4,2]
+	end
+	
+	def obtener_siguiente 
 		obtener(@@targetRonda)
 	end
 
-	def obtener iteracion 
+
+	def obtener iteracion  
     	@@ronda = 0
       @secuenciaActual = []
 		for i in 0..iteracion do
@@ -55,5 +60,8 @@ class Secuencia
  		resultado = @@ronda == @@targetRonda
 		return resultado
 	end
+
+	
+
 
 end

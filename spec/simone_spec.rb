@@ -4,33 +4,39 @@ describe "Simone" do
 
 	it "Dame una secuencia de la primera ronda" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
 		expect( secuencia.obtener(0)).to eq [3]
 	end
 
 	it "Dame una secuencia de la primera ronda" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
 		expect( secuencia.obtener(1)).to eq [3,1]
 	end
 
 	it "Dame la secuencia inicial" do
 	  secuencia = Secuencia.new
+		secuencia.modo_test
 	  expect( secuencia.inicial ).to eq [3,1,4,2]
 	end
 
 	it "Dame la secuencia de dos numeros en string" do
 	  secuencia = Secuencia.new
+		secuencia.modo_test
 	  secuencia.obtener(1)
 	  expect( secuencia.secuenciaToString ).to eq "3-1"
 	end
 
 	it "Numero ingresado por el usuario es igual a el numero correcto" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
 		respuesta = secuencia.comparar(3)
 		expect(respuesta).to eq true	
 	end
 	
 	it "Numero ingresado por el usuario es igual a el numero correcto" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
 		respuesta = secuencia.comparar(3)
 		expect(respuesta).to eq true	
 		secuencia.incrementar_ronda
@@ -39,6 +45,7 @@ describe "Simone" do
 	end
 	it "Numero ingresado por el usuario es igual a el numero correcto" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
 		respuesta = secuencia.comparar_y_avanzar(3)
 		expect(respuesta).to eq true	
 		respuesta = secuencia.comparar_y_avanzar(1)
@@ -46,11 +53,13 @@ describe "Simone" do
 	end
 	it "Juego la ronda final" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
 		expect(secuencia.finalizo_juego).to eq false		
 	end
 
 	it "Termino ronda de dos" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
     secuencia.obtener(1)
     respuesta = secuencia.comparar_y_avanzar(3)
 		respuesta = secuencia.comparar_y_avanzar(1)
@@ -59,6 +68,7 @@ describe "Simone" do
 
 	it "Termino ronda de 4" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
     secuencia.obtener(3)
     respuesta = secuencia.comparar_y_avanzar(3)
 		respuesta = secuencia.comparar_y_avanzar(1)
@@ -71,6 +81,7 @@ describe "Simone" do
 	
 	it "Juego ronda de 2" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
     secuencia.obtener(1)
     respuesta = secuencia.comparar_y_avanzar(3)
 		respuesta = secuencia.comparar_y_avanzar(1)
@@ -81,6 +92,7 @@ describe "Simone" do
 	
 	it "Juego ronda de 1" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
     secuencia.obtener(0)
     respuesta = secuencia.comparar_y_avanzar(3)
     expect(secuencia.finalizo_juego).to eq false	
@@ -90,6 +102,7 @@ describe "Simone" do
 
 	it "Juego dos rondas" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
     secuencia.obtener(0)
     respuesta = secuencia.comparar_y_avanzar(3)
     expect(secuencia.finalizo_juego).to eq false	
@@ -105,6 +118,7 @@ describe "Simone" do
 
 	it "Gano el juego" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
     secuencia.obtener(0)
     respuesta = secuencia.comparar_y_avanzar(3)
     expect(secuencia.finalizo_juego).to eq false	
@@ -143,6 +157,7 @@ describe "Simone" do
 
 		it "Me equivoco en la primera ronda" do
 		secuencia = Secuencia.new
+		secuencia.modo_test
     secuencia.obtener(1)
     respuesta = secuencia.comparar_y_avanzar(3)
 		respuesta = secuencia.comparar_y_avanzar(2)
@@ -151,6 +166,7 @@ describe "Simone" do
 
 	it "Gano el juego obtener siguiente" do
 		secuencia = Secuencia.new
+	secuencia.modo_test
     secuencia.obtener_siguiente
     respuesta = secuencia.comparar_y_avanzar(3)
     expect(secuencia.finalizo_juego).to eq false	
